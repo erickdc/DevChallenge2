@@ -142,26 +142,26 @@ namespace AntarticRepublicS.Scripts
         public static ICollection SplitEnglishWords(string[] combinedEnglishWords, string[] englishWords)
         {
              List<string> newCollectionEnglishWord = new List<string>();
-            for (int i = 0; i < combinedEnglishWords.Length; i++)
+            for (var i = 0; i < combinedEnglishWords.Length; i++)
             {
-                int amountAddedToList = 0;
-              
-                for (int j = 0; j < englishWords.Length; j++)
+               
+                if (englishWords.Count(x => x.Contains(combinedEnglishWords[i].ToLower())) > 1)
                 {
-                    string combinedWord = combinedEnglishWords[i].ToLower();
-                    int indexWord = combinedWord.IndexOf(englishWords[j].ToLower(), StringComparison.InvariantCultureIgnoreCase);
-                    
-                    if (indexWord < 0) continue;
-                    amountAddedToList++;
-
-                   
-                    newCollectionEnglishWord.Add(combinedEnglishWords[i].Substring(indexWord, englishWords[j].Length));
-                    combinedEnglishWords[i] =combinedEnglishWords[i].Remove(indexWord, englishWords[j].Length);
-
+                    string tempWord = null;
+                    for (var j = 0; j < combinedEnglishWords[i].Length; j++)
+                    {
+                        tempWord += combinedEnglishWords[i][j];
+                        if (!englishWords.Any(x => x.Equals(tempWord))) continue;
+                        newCollectionEnglishWord.Add(tempWord);
+                        tempWord = "";
+                    }
                 }
-                if (amountAddedToList == 0)
+                else
+                {
                     newCollectionEnglishWord.Add(combinedEnglishWords[i]);
-
+                }
+              
+               
 
 
 

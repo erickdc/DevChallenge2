@@ -19,6 +19,7 @@ namespace AntarticRepublicS.Controllers
         [HttpPost]
         public ActionResult Index(SecretModel model)
         {
+            
            
             ViewBag.phrase = model.Secret;
             return View();
@@ -30,13 +31,17 @@ namespace AntarticRepublicS.Controllers
             var listWords = new List<string>();
             int amountTimes = 20;
             var listFibonacciSequenceModel = new List<FibonacciSequenceModel>();
+          //  var listFibonacciSequenceModelCopy = new List<FibonacciSequenceModel>();
             var responseList = new List<ResponseStatusModel>();
             for (int i = 0; i < amountTimes; i++)
             {
                 var guid = Guid.NewGuid();
                 listFibonacciSequenceModel.Add(
                     MapJsonToModel<FibonacciSequenceModel>("http://internal-devchallenge-2-dev.apphb.com/values/" + guid));
-                IEncrypter encrpyter = SantaEncrypter.GetCorrespondingEncrypter(listFibonacciSequenceModel[i].Algorithm,
+               // var temp = new FibonacciSequenceModel();
+            //    temp.Words = listFibonacciSequenceModel[i].Words.Clone() as string[];
+           //     listFibonacciSequenceModelCopy.Add(temp);
+                    IEncrypter encrpyter = SantaEncrypter.GetCorrespondingEncrypter(listFibonacciSequenceModel[i].Algorithm,
                     listFibonacciSequenceModel[i]);
                 listWords.Add(encrpyter.Encrypt());
                 if (listWords.Count > i)
