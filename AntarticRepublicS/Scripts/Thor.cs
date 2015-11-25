@@ -48,7 +48,7 @@ namespace AntarticRepublicS.Scripts
                         var number = GetNextFibonacciSequence();
                         int amount = 1;
                         arrayWords[i] = arrayWords[i].Remove(j, amount);
-                        arrayWords[i] = arrayWords[i].Insert(j, number.ToString());
+                        arrayWords[i] = arrayWords[i].Insert(j, number.ToString(CultureInfo.InvariantCulture));
 
                     }
                 }
