@@ -11,7 +11,7 @@ namespace AntarticRepublicS.Scripts
     public class Thor:IEncrypter
     {
         public static FibonacciSequenceModel WordModel { get; set; }
-        public string[] ListEnglishWords = { "drool", "cats", "clean", "code", "dogs", "materials", "needed", "this", "is", "hard", "what", "are", "you", "smoking", "shot", "gun", "down", "river", "super", "man", "rule", "acklen", "developers", "are", "amazing" };
+        public string[] ListEnglishWords = { "drool", "cats", "clean", "code", "dogs", "materials", "needed", "this", "is", "hard", "what", "are", "you", "smoking", "shot", "gun", "down", "river", "super", "man", "rule", "acklen", "developers", "amazing" };
         private static double _previousFibonacci;
 
 
