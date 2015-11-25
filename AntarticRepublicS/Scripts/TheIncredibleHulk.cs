@@ -17,6 +17,7 @@ namespace AntarticRepublicS.Scripts
         public string Encrypt()
         {
             var listWords = SantaEncrypter.ShiftVowels(WordModel.Words, new[] { 'a', 'e', 'i', 'o', 'u', 'y' });
+            SantaEncrypter.OrderArrayWords(listWords, SantaEncrypter.Order.Ascending);
             SantaEncrypter.OrderArrayWords(listWords, SantaEncrypter.Order.Reverse);
             string concatenatedString = SantaEncrypter.GetStringsByDelimiter(listWords, '*');
             return SantaEncrypter.EncodeBase64(concatenatedString);

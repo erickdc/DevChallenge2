@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using AntarticRepublicS.Models;
 using AntarticRepublicS.Scripts;
 using Newtonsoft.Json;
+using RestSharp;
 
 namespace AntarticRepublicS.Controllers
 {
@@ -41,8 +43,7 @@ namespace AntarticRepublicS.Controllers
 
                     };
                     ResponseStatusModel response =
-                        PostPayLoad<ResponseStatusModel>("http://internal-devchallenge-2-dev.apphb.com/values/" + guid +
-                                                         "/" + listFibonacciSequenceModel[i].Algorithm, request);
+                        PostPayLoad<ResponseStatusModel>("http://internal-devchallenge-2-dev.apphb.com" , request,guid, listFibonacciSequenceModel[i].Algorithm);
                     responseList.Add(response);
                 }
             }
@@ -55,26 +56,17 @@ namespace AntarticRepublicS.Controllers
             return JsonConvert.DeserializeObject<T>(response);
         }
 
-        public T PostPayLoad<T>(string url, PayLoadRequestModel payLoadModel)
+        public T PostPayLoad<T>(string url, PayLoadRequestModel payLoadModel,Guid guid, string name)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "POST";
 
-            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            var client = new RestClient(url);
+            var request = new RestRequest("/values/" + guid + "/" + name, Method.POST)
             {
-                string json = new JavaScriptSerializer().Serialize(payLoadModel);
-
-                streamWriter.Write(json);
-            }
-
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            string result;
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                result = streamReader.ReadToEnd();
-            }
-            return JsonConvert.DeserializeObject<T>(result);
+                RequestFormat = DataFormat.Json
+            };
+            request.AddBody(payLoadModel);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<T>(response.Content);
         }
     }
 }

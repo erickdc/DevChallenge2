@@ -18,7 +18,7 @@ namespace AntarticRepublicS.Scripts
 
         public string[] ArrayWords;
         private static FibonacciSequenceModel _fiboModel;
-        private static double _previousFibonacci;
+    
         public SantaEncrypter(string[] arrayWords)
         {
             ArrayWords = arrayWords;
@@ -145,15 +145,19 @@ namespace AntarticRepublicS.Scripts
             for (int i = 0; i < combinedEnglishWords.Length; i++)
             {
                 int amountAddedToList = 0;
+              
                 for (int j = 0; j < englishWords.Length; j++)
                 {
-                    int indexWord = combinedEnglishWords[i].IndexOf(englishWords[j], StringComparison.Ordinal);
-                    int totalWordSize = indexWord + englishWords[j].Length;
+                    string combinedWord = combinedEnglishWords[i].ToLower();
+                    int indexWord = combinedWord.IndexOf(englishWords[j].ToLower(), StringComparison.InvariantCultureIgnoreCase);
+                    
                     if (indexWord < 0) continue;
                     amountAddedToList++;
-                    Console.WriteLine(englishWords[j]);
-                    combinedEnglishWords[i] = combinedEnglishWords[i].Substring(totalWordSize);
-                    newCollectionEnglishWord.Add(englishWords[j]);
+
+                   
+                    newCollectionEnglishWord.Add(combinedEnglishWords[i].Substring(indexWord, englishWords[j].Length));
+                    combinedEnglishWords[i] =combinedEnglishWords[i].Remove(indexWord, englishWords[j].Length);
+
                 }
                 if (amountAddedToList == 0)
                     newCollectionEnglishWord.Add(combinedEnglishWords[i]);
@@ -174,19 +178,20 @@ namespace AntarticRepublicS.Scripts
                 for (int j = 0; j < arrayWords[i].Length; j++)
                 {
                     int amount = 1;
-                    if (!BelongGroupLetters(arrayWords[i].ElementAt(j), new char[] { 'a', 'e', 'i', 'o', 'u', 'y' }))
+                    char tempLetter =arrayWords[i][j];
+                    if (!BelongGroupLetters(tempLetter, new[] { 'a', 'e', 'i', 'o', 'u', 'y' }))
                     {
-                        char tempLetter;
+                        
                         if (actualState == 0)
                         {
-                            tempLetter = arrayWords[i][j];
+                           
                             arrayWords[i] = arrayWords[i].Remove(j, amount);
                             arrayWords[i] = arrayWords[i].Insert(j, char.ToLower(tempLetter).ToString());
                             actualState = 1;
                         }
                         else
                         {
-                            tempLetter = arrayWords[i][j];
+                           
                             arrayWords[i] = arrayWords[i].Remove(j, amount);
                             arrayWords[i] = arrayWords[i].Insert(j, char.ToUpper(tempLetter).ToString());
                             actualState = 0;

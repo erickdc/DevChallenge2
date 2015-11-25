@@ -57,6 +57,7 @@ C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\Newtonsoft.Json.dll
+C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\RestSharp.dll
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\System.Web.Helpers.dll
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\System.Web.Mvc.dll
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\System.Web.Optimization.dll
@@ -68,6 +69,7 @@ C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\Antlr3.Runtime.pdb
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\Newtonsoft.Json.xml
+C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\RestSharp.xml
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\System.Web.Helpers.xml
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\System.Web.Mvc.xml
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\System.Web.Optimization.xml
@@ -77,3 +79,4 @@ C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\bin\System.Web.WebPages.Razor.xml
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\obj\Debug\AntarticRepublicS.dll
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\obj\Debug\AntarticRepublicS.pdb
+C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\obj\Debug\AntarticRepublicS.csprojResolveAssemblyReference.cache

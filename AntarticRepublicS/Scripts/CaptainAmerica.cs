@@ -27,9 +27,10 @@ namespace AntarticRepublicS.Scripts
         public string Encrypt()
         {
             var listWords = SantaEncrypter.ShiftVowels(WordModel.Words, new[] { 'a', 'e', 'i', 'o', 'u', 'y' });
+            SantaEncrypter.OrderArrayWords(listWords, SantaEncrypter.Order.Ascending);
             SantaEncrypter.OrderArrayWords(listWords, SantaEncrypter.Order.Reverse);
-            string[] listWordsFibo = ChangeVowelsByNumber(listWords, WordModel.StartingFibonacciNumber) as string[];
-            string concatenatedString = SantaEncrypter.GetStringByAsciiDelimiter(listWordsFibo);
+            var listWordsFibo = ChangeVowelsByNumber(listWords, WordModel.StartingFibonacciNumber) as string[];
+            var concatenatedString = SantaEncrypter.GetStringByAsciiDelimiter(listWordsFibo);
             return SantaEncrypter.EncodeBase64(concatenatedString);
         }
 
@@ -52,7 +53,7 @@ namespace AntarticRepublicS.Scripts
             return arrayWords;
         }
 
-        private static double SetPreviousFibonacciSequence(int num)
+        private static void SetPreviousFibonacciSequence(int num)
         {
             int a, b = 1;
             var fibonacciN = a = 0;
@@ -62,7 +63,7 @@ namespace AntarticRepublicS.Scripts
                 a = b;
                 b = fibonacciN;
             }
-            return a;
+            _previousFibonacci = a;
         }
         private static double GetNextFibonacciSequence()
         {

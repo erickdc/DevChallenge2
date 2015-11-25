@@ -31,8 +31,8 @@ namespace AntarticRepublicS.Scripts
         {
             string[] listWords = SantaEncrypter.SplitEnglishWords(WordModel.Words, ListEnglishWords) as string[];
             SantaEncrypter.OrderArrayWords(listWords, SantaEncrypter.Order.Ascending);
-            SantaEncrypter.AlternateConstantLetters(listWords);
-            string[] listWordsFibo = ChangeVowelsByNumber(WordModel.Words, WordModel.StartingFibonacciNumber) as string[];
+            string[] listAlternatedWords = SantaEncrypter.AlternateConstantLetters(listWords) as string[];
+            string[] listWordsFibo = ChangeVowelsByNumber(listAlternatedWords, WordModel.StartingFibonacciNumber) as string[];
             string asteriskConctS = SantaEncrypter.GetStringsByDelimiter(listWordsFibo, '*');
             return SantaEncrypter.EncodeBase64(asteriskConctS);
         }
@@ -48,7 +48,7 @@ namespace AntarticRepublicS.Scripts
                         var number = GetNextFibonacciSequence();
                         int amount = 1;
                         arrayWords[i] = arrayWords[i].Remove(j, amount);
-                        arrayWords[i] = arrayWords[i].Insert(j, number.ToString(CultureInfo.InvariantCulture));
+                        arrayWords[i] = arrayWords[i].Insert(j, number.ToString());
 
                     }
                 }
@@ -56,7 +56,7 @@ namespace AntarticRepublicS.Scripts
             return arrayWords;
         }
 
-        private static double SetPreviousFibonacciSequence(int num)
+        private static void SetPreviousFibonacciSequence(int num)
         {
             int a, b = 1;
             var fibonacciN = a = 0;
@@ -66,7 +66,7 @@ namespace AntarticRepublicS.Scripts
                 a = b;
                 b = fibonacciN;
             }
-            return a;
+            _previousFibonacci= a;
         }
         private static double GetNextFibonacciSequence()
         {
