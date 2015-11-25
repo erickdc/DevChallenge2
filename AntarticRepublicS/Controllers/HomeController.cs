@@ -16,8 +16,15 @@ namespace AntarticRepublicS.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
-        public ActionResult Index()
+        [HttpPost]
+        public ActionResult Index(SecretModel model)
+        {
+           
+            ViewBag.phrase = model.Secret;
+            return View();
+        }
+
+        public ActionResult Encrypt()
         {
             var listWords = new List<string>();
             int amountTimes = 20;
@@ -39,14 +46,20 @@ namespace AntarticRepublicS.Controllers
                         EmailAddress = "erickdcb10@gmail.com",
                         Name = "Erick Caballero",
                         RepoUrl = "https://github.com/erickdc/DevChallenge2",
-                        WebHookUrl = "http://antarticchallengedev2.apphb.com"
+                        WebHookUrl = "http://antarticchallengedev2.apphb.com/"
 
                     };
                     ResponseStatusModel response =
-                        PostPayLoad<ResponseStatusModel>("http://internal-devchallenge-2-dev.apphb.com" , request,guid, listFibonacciSequenceModel[i].Algorithm);
+                        PostPayLoad<ResponseStatusModel>("http://internal-devchallenge-2-dev.apphb.com", request, guid, listFibonacciSequenceModel[i].Algorithm);
                     responseList.Add(response);
                 }
             }
+            return RedirectToAction("Index");
+        }
+        // GET: Home
+        public ActionResult Index()
+        {
+        
             return View();
         }
         public T MapJsonToModel<T>(string url)
