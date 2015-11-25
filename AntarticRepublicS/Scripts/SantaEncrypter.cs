@@ -141,7 +141,7 @@ namespace AntarticRepublicS.Scripts
 
         public static ICollection SplitEnglishWords(string[] combinedEnglishWords, string[] englishWords)
         {
-            List<string> newCollectionEnglishWord = new List<string>();
+             List<string> newCollectionEnglishWord = new List<string>();
             for (int i = 0; i < combinedEnglishWords.Length; i++)
             {
                 int amountAddedToList = 0;
