@@ -47,7 +47,7 @@ namespace AntarticRepublicS.Controllers
                         EmailAddress = "erickdcb10@gmail.com",
                         Name = "Erick Caballero",
                         RepoUrl = "https://github.com/erickdc/DevChallenge2",
-                        WebHookUrl = "http://antarticchallengedev2.apphb.com/"
+                        WebHookUrl = "http://antarticchallengedev2.apphb.com/Home/Index/"
 
                     };
                     ResponseStatusModel response =
