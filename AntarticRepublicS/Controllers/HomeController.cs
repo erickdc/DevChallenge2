@@ -26,6 +26,7 @@ namespace AntarticRepublicS.Controllers
 
         public ActionResult Encrypt()
         {
+
             var listWords = new List<string>();
             int amountTimes = 20;
             var listFibonacciSequenceModel = new List<FibonacciSequenceModel>();
