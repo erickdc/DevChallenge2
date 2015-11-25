@@ -145,13 +145,13 @@ namespace AntarticRepublicS.Scripts
             for (var i = 0; i < combinedEnglishWords.Length; i++)
             {
                
-                if (englishWords.Count(x => x.Contains(combinedEnglishWords[i].ToLower())) > 1)
+                if (englishWords.Count( s => combinedEnglishWords[i].ToLower().Contains(s.ToLower()))>1)
                 {
                     string tempWord = null;
                     for (var j = 0; j < combinedEnglishWords[i].Length; j++)
                     {
                         tempWord += combinedEnglishWords[i][j];
-                        if (!englishWords.Any(x => x.Equals(tempWord))) continue;
+                        if (!englishWords.Contains(tempWord.ToLower())) continue;
                         newCollectionEnglishWord.Add(tempWord);
                         tempWord = "";
                     }
@@ -179,23 +179,20 @@ namespace AntarticRepublicS.Scripts
                 {
                     int amount = 1;
                     char tempLetter =arrayWords[i][j];
-                    if (!BelongGroupLetters(tempLetter, new[] { 'a', 'e', 'i', 'o', 'u', 'y' }))
+                    if (BelongGroupLetters(tempLetter, new[] {'a', 'e', 'i', 'o', 'u', 'y'})) continue;
+                    if (actualState == 0)
                     {
-                        
-                        if (actualState == 0)
-                        {
                            
-                            arrayWords[i] = arrayWords[i].Remove(j, amount);
-                            arrayWords[i] = arrayWords[i].Insert(j, char.ToLower(tempLetter).ToString());
-                            actualState = 1;
-                        }
-                        else
-                        {
+                        arrayWords[i] = arrayWords[i].Remove(j, amount);
+                        arrayWords[i] = arrayWords[i].Insert(j, char.ToLower(tempLetter).ToString());
+                        actualState = 1;
+                    }
+                    else
+                    {
                            
-                            arrayWords[i] = arrayWords[i].Remove(j, amount);
-                            arrayWords[i] = arrayWords[i].Insert(j, char.ToUpper(tempLetter).ToString());
-                            actualState = 0;
-                        }
+                        arrayWords[i] = arrayWords[i].Remove(j, amount);
+                        arrayWords[i] = arrayWords[i].Insert(j, char.ToUpper(tempLetter).ToString());
+                        actualState = 0;
                     }
                 }
 
