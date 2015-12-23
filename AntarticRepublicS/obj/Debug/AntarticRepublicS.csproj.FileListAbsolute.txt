@@ -118,6 +118,5 @@ C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Razor.x
 C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.xml
 C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.Deployment.xml
 C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.Razor.xml
-C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\obj\Debug\AntarticRepublicS.csprojResolveAssemblyReference.cache
 C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\obj\Debug\AntarticRepublicS.dll
 C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\obj\Debug\AntarticRepublicS.pdb
