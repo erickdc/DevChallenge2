@@ -80,3 +80,43 @@ C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\obj\Debug\AntarticRepublicS.csprojResolveAssemblyReference.cache
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\obj\Debug\AntarticRepublicS.dll
 C:\Users\erick304\Documents\Visual Studio 2015\Projects\AntarticRepublicSecurity\AntarticRepublicS\obj\Debug\AntarticRepublicS.pdb
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\csc.exe
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\vbc.exe
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\VBCSCompiler.exe
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\AntarticRepublicS.dll.config
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\AntarticRepublicS.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\AntarticRepublicS.pdb
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\Antlr3.Runtime.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\Newtonsoft.Json.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\RestSharp.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Helpers.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Mvc.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Optimization.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Razor.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.Razor.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\WebGrease.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\Newtonsoft.Json.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\RestSharp.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Helpers.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Mvc.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Optimization.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.Razor.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\bin\System.Web.WebPages.Razor.xml
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\obj\Debug\AntarticRepublicS.dll
+C:\Users\erick304\Desktop\DevChallenge2\AntarticRepublicS\obj\Debug\AntarticRepublicS.pdb

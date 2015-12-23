@@ -16,14 +16,18 @@ namespace AntarticRepublicS.Controllers
 {
     public class HomeController : Controller
     {
-        private static string _secretMessage = " ";
+       
         [HttpPost]
         public ActionResult Index(SecretModel model)
         {
-
-
-            _secretMessage = model.Secret;
-            return RedirectToAction("Index");
+            ViewBag.phrase = model.Secret;
+            return View();
+        }
+        // GET: Home
+        public ActionResult Index()
+        {
+            
+            return View();
         }
 
         public ActionResult Encrypt()
@@ -53,7 +57,7 @@ namespace AntarticRepublicS.Controllers
                           EmailAddress = "erickdcb10@gmail.com",
                           Name = "Erick Caballero",
                           RepoUrl = "https://github.com/erickdc/DevChallenge2",
-                          WebHookUrl ="http://antarticchallengedev2.apphb.com/Home/Index/"
+                          WebHookUrl = "http://antarticchallengedev2.apphb.com/Home/Index/"
 
                       };
                       ResponseStatusModel response =
@@ -63,12 +67,7 @@ namespace AntarticRepublicS.Controllers
               }
             return RedirectToAction("Index");
         }
-        // GET: Home
-        public ActionResult Index()
-        {
-            ViewBag.phrase = _secretMessage;
-            return View();
-        }
+        
         public T MapJsonToModel<T>(string url)
         {
             var cli = new WebClient { Headers = {[HttpRequestHeader.ContentType] = "application/json" } };
